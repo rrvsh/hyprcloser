@@ -1,4 +1,7 @@
-use hyprland::event_listener::EventListener;
+use hyprland::data::Clients;
+use hyprland::dispatch::*;
+use hyprland::shared::{HyprData, HyprDataVec};
+use hyprland::{dispatch::Dispatch, event_listener::EventListener};
 use std::cell::RefCell;
 
 fn main() -> hyprland::Result<()> {
@@ -15,6 +18,11 @@ fn main() -> hyprland::Result<()> {
             println!("---");
             println!("prev window: {:?}", *prev);
             println!("curr window: {:?}", *curr);
+            if *prev == "clipse" && *curr != "clipse" {
+                println!("closing clipse");
+                let _ =
+                    Dispatch::call(DispatchType::CloseWindow(WindowIdentifier::Title("clipse")));
+            }
         }
     });
     event_listener.start_listener()?;
