@@ -8,6 +8,10 @@ repository = "https://github.com/rrvsh/hyprcloser"
 readme = "./README.md"
 categories = ["gui"]
 license = "MIT"
+exclude = [
+  ".envrc",
+  "devenv.*",
+]
 
 [dependencies]
 hyprland = "0.4.0-beta.1"
