@@ -1,6 +1,4 @@
-use hyprland::data::Clients;
 use hyprland::dispatch::*;
-use hyprland::shared::{HyprData, HyprDataVec};
 use hyprland::{dispatch::Dispatch, event_listener::EventListener};
 use std::cell::RefCell;
 
