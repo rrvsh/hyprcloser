@@ -1,7 +1,13 @@
 [package]
-name = "hyprcloser-rs"
+name = "hyprcloser"
+description = "Automatically close a window when it loses focus."
 version = "0.1.0"
+authors = ["Mohammad Rafiq <mohammadrafiq567@gmail.com>"]
 edition = "2021"
+repository = "https://github.com/rrvsh/hyprcloser"
+readme = "./README.md"
+categories = ["gui"]
+license = "MIT"
 
 [dependencies]
 hyprland = "0.4.0-beta.1"
